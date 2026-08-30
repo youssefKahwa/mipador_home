@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="col-span-1 sm:col-span-2 lg:col-span-2 lg:pr-8"
           >
-            <Link to={`/${currentLang}/`} className="inline-block mb-6">
+            <Link to={`/${currentLang}/`} className="inline-flex items-center gap-2.5 mb-6">
               <img
                 src={SITE.logo.footer.src}
                 srcSet={SITE.logo.footer.srcSet}
@@ -50,6 +50,9 @@ const Footer: React.FC = () => {
                 height={SITE.logo.footer.height}
                 className="h-16 w-auto object-contain"
               />
+              <span className="font-display leading-none text-espresso/50 text-[9px] tracking-[0.4em] uppercase">
+                {t("nav.propertyTag")}
+              </span>
             </Link>
             <p className="text-sm text-espresso/65 leading-relaxed max-w-xs">
               {t("footer.tagline")}

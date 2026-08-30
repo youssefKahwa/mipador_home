@@ -9,7 +9,12 @@
     "colorTool": "بالطة الألوان",
     "openCart": "فتح السلة",
     "openCartCount_one": "السلة، {{count}} منتج",
-    "openCartCount_other": "السلة، {{count}} منتجات"
+    "openCartCount_other": "السلة، {{count}} منتجات",
+    "ticker1": "مصنوع باليد فالمغرب",
+    "ticker2": "الخلاص عند التوصيل",
+    "ticker3": "التوصيل لجميع المدن · 150 درهم",
+    "ticker4": "الإرجاع فضرف 7 أيام",
+    "propertyTag": "الدار"
   },
   "hero": {
     "eyebrow": "ميبادور — ستوديو الأثاث المغربي",

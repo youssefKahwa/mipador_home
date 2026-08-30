@@ -9,7 +9,7 @@ const HeroSection = () => {
   const currentLang = lang || "fr";
 
   return (
-    <section className="relative bg-[#FBF4ED] px-3 sm:px-5 lg:px-6 pt-3 sm:pt-4 lg:pt-5 pb-3 sm:pb-5">
+    <section className="relative bg-[#FBF4ED] px-3 sm:px-5 lg:px-8 pt-10 sm:pt-12 lg:pt-8 pb-3 sm:pb-5">
       <div className="relative overflow-hidden rounded-3xl min-h-[94dvh] sm:min-h-[92vh] lg:min-h-[95vh] bg-espresso-975">
 
         {/* Background image — plain divs, no JS, LCP paints as soon as image downloads */}
@@ -39,7 +39,7 @@ const HeroSection = () => {
         </div>
 
         {/* Headline — CSS fade-in, no JS opacity gate */}
-        <div className="relative z-10 flex items-center justify-center text-center px-6 sm:px-10 h-full pt-16 sm:pt-20">
+        <div className="relative z-10 flex items-center justify-center text-center px-6 sm:px-10 h-full pt-24 sm:pt-14 lg:pt-16">
           <div className="max-w-5xl mx-auto flex flex-col items-center gap-8">
             <h1
               className="hero-fade-in font-display text-[3.4rem] sm:text-[5.2rem] md:text-[6.8rem] lg:text-[8.5rem] font-light tracking-[-0.03em] leading-[1.04] text-white"

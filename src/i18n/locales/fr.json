@@ -9,7 +9,12 @@
     "colorTool": "Palette Couleurs",
     "openCart": "Ouvrir le panier",
     "openCartCount_one": "Panier, {{count}} article",
-    "openCartCount_other": "Panier, {{count}} articles"
+    "openCartCount_other": "Panier, {{count}} articles",
+    "ticker1": "Fabriqué à la main au Maroc",
+    "ticker2": "Paiement à la livraison",
+    "ticker3": "Livraison partout au Maroc · 150 MAD",
+    "ticker4": "Retours sous 7 jours",
+    "propertyTag": "Maison"
   },
   "hero": {
     "eyebrow": "Mipador — Studio Mobilier Marocain",

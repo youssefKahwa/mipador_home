@@ -9,7 +9,12 @@
     "colorTool": "لوحة الألوان",
     "openCart": "فتح سلة المشتريات",
     "openCartCount_one": "سلة المشتريات، {{count}} منتج",
-    "openCartCount_other": "سلة المشتريات، {{count}} منتجات"
+    "openCartCount_other": "سلة المشتريات، {{count}} منتجات",
+    "ticker1": "صُنع يدويًا في المغرب",
+    "ticker2": "الدفع عند الاستلام",
+    "ticker3": "توصيل لجميع المدن · 150 درهم",
+    "ticker4": "إرجاع خلال 7 أيام",
+    "propertyTag": "المنزل"
   },
   "hero": {
     "eyebrow": "ميبادور — ستوديو الأثاث المغربي",

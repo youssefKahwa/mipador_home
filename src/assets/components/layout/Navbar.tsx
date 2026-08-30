@@ -39,6 +39,8 @@ const Navbar: React.FC = () => {
     { label: t("nav.contact"),    path: `/${currentLang}/contact` },
   ];
 
+  const tickerItems = [t("nav.ticker1"), t("nav.ticker2"), t("nav.ticker3"), t("nav.ticker4")];
+
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
@@ -47,23 +49,42 @@ const Navbar: React.FC = () => {
 
   return (
     <>
+      {/* Top ticker — trust signals, scrolls continuously, hidden only while cart is open */}
+      <div
+        className={`block fixed top-0 left-0 right-0 z-30 bg-espresso-deep border-b border-white/8 overflow-hidden h-7 transition-opacity duration-300 ${
+          cartOpen ? "opacity-0 pointer-events-none" : "opacity-100"
+        }`}
+      >
+        <div className="flex items-center h-full animate-marquee">
+          {[...tickerItems, ...tickerItems].map((item, i) => (
+            <span
+              key={i}
+              className="shrink-0 flex items-center gap-6 text-[9.5px] tracking-[0.15em] text-white/70 uppercase font-bold px-6"
+            >
+              {item}
+              <span className="text-gold/60">✦</span>
+            </span>
+          ))}
+        </div>
+      </div>
+
       {/* Scroll progress accent — subtle, GPU-cheap (transform only) */}
       <motion.div
         aria-hidden="true"
-        className={`fixed top-0 left-0 right-0 z-40 h-0.5 bg-gold origin-left transition-opacity duration-300 ${
+        className={`fixed top-7 left-0 right-0 z-40 h-0.5 bg-gold origin-left transition-opacity duration-300 ${
           cartOpen ? "opacity-0" : "opacity-100"
         }`}
         style={{ scaleX: scrollProgress }}
       />
     <div
-      className={`fixed top-0 left-0 right-0 z-30 flex justify-center transition-all duration-500 ${
+      className={`fixed top-7 left-0 right-0 z-30 flex justify-center transition-all duration-500 ${
         cartOpen ? "opacity-0 pointer-events-none" : ""
-      } ${onHero ? "px-3 sm:px-5 lg:px-6 pt-3 sm:pt-4 lg:pt-5" : "px-4 pt-4"}`}
+      } ${onHero ? "px-1 sm:px-5 lg:px-6 pt-3 sm:pt-4 lg:pt-5" : "px-2 sm:px-4 pt-4"}`}
     >
       <nav
         className={`nav-entrance transition-all duration-500 ease-in-out ${
           scrolled
-            ? "w-full max-w-2xl bg-cream/92 backdrop-blur-2xl shadow-[0_8px_30px_rgba(0,0,0,0.06)] rounded-xl border border-white/10"
+            ? "w-full max-w-4xl bg-cream/92 backdrop-blur-2xl shadow-[0_8px_30px_rgba(0,0,0,0.06)] rounded-xl border border-white/10"
             : onHero
             ? "w-full bg-transparent rounded-xl"
             : "w-full max-w-7xl bg-transparent rounded-xl"
@@ -71,11 +92,11 @@ const Navbar: React.FC = () => {
       >
         <div
           className={`flex items-center justify-between transition-all duration-500 ${
-            scrolled ? "px-6 py-3" : "px-5 py-4"
+            scrolled ? "px-3 sm:px-6 py-4" : "px-3 sm:px-5 py-4"
           }`}
         >
           {/* Logo */}
-          <Link to={`/${currentLang}`} className="shrink-0">
+          <Link to={`/${currentLang}`} className="shrink-0 flex items-center gap-2.5">
             <img
               src={SITE.logo.nav.src}
               srcSet={SITE.logo.nav.srcSet}
@@ -86,6 +107,13 @@ const Navbar: React.FC = () => {
               className="h-7 w-auto object-contain transition-all duration-500"
               style={onHero ? { filter: "brightness(0) invert(1) drop-shadow(0 2px 6px rgba(0,0,0,0.5))" } : undefined}
             />
+            <span
+              className={`font-display leading-none text-[8.5px] tracking-[0.4em] uppercase transition-colors duration-500 ${
+                onHero ? "text-white/70" : "text-espresso/50"
+              }`}
+            >
+              {t("nav.propertyTag")}
+            </span>
           </Link>
 
           {/* Desktop links */}

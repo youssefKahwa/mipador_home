@@ -9,7 +9,12 @@
     "colorTool": "Color Palette",
     "openCart": "Open cart",
     "openCartCount_one": "Open cart, {{count}} item",
-    "openCartCount_other": "Open cart, {{count}} items"
+    "openCartCount_other": "Open cart, {{count}} items",
+    "ticker1": "Handcrafted in Morocco",
+    "ticker2": "Cash on delivery",
+    "ticker3": "Delivered nationwide · 150 MAD",
+    "ticker4": "7-day return window",
+    "propertyTag": "Home"
   },
   "hero": {
     "eyebrow": "Mipador — Moroccan Furniture Studio",
